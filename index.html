@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+      <title>
+          project 78
+      </title>
+    </head>
+    <body>
+        <h1>My Family book</h1>
+        <img id="family_member_image" src="https://cdn3.vectorstock.com/i/1000x1000/67/12/happy-family-cartoon-vector-1536712.jpg"
+        style="width: 500px; height: 500px;">
+        <h4 id="family_member_name"></h4>
+        <p>Family</p>
+        <button onclick="update()" >Next</button>
+        <script>        
+        var images=["https://cdn3.vectorstock.com/i/1000x1000/67/12/happy-family-cartoon-vector-1536712.jpg","https://previews.123rf.com/images/tigatelu/tigatelu1904/tigatelu190400113/121431847-vector-illustration-of-cartoon-father-carrying-a-son-in-his-arms.jpg","https://image.shutterstock.com/image-vector/happy-african-american-girl-cartoon-260nw-522003124.jpg","https://image.shutterstock.com/image-vector/cartoon-boy-giving-you-thumbs-260nw-143614309.jpg","https://image.shutterstock.com/image-vector/cute-little-girl-spring-260nw-337904864.jpg","https://i.pinimg.com/originals/01/9b/90/019b90b5f8f04e00e0c7b104da92a67a.jpg"]
+        var names=["Family Book","Ranbir Sigh","Daljeet Sigh","Rocky Sigh","Alia Sigh","Soni Sigh"];
+        var i = 0;
+        function update(){
+            i++
+            var numbers_of_Family_member_in_array=5;
+            if(i>numbers_of_Family_member_in_array){
+                i=0;
+            }
+            var updatedimage=images[i];
+            var updatednames=names[i];
+            document.getElementById("family_member_image").src=updatedimage;
+            document.getElementById("family_member_name").innerHTML=updatednames;
+        }
+        </script>
+
+    </body>
+</html>
